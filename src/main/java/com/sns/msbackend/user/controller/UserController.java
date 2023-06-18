@@ -9,12 +9,12 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequiredArgsConstructor
-@RequestMapping
+@RequestMapping(value = "/users")
 public class UserController {
 
     private final UserService userService;
 
-    @GetMapping(value = "/")
+    @GetMapping(value = "/getAll")
     public String getAllUser(){
         userService.getUser();
         return "Success";
